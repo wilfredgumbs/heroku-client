@@ -8,9 +8,9 @@ function App() {
   const [user, setUser] = useState(null);
 
   const signIn = ()=>{
-      axios.get(`https://passport-upwork.herokuapp.com//auth/heroku`)
+      axios.get(`https://passport-upwork.herokuapp.com/auth/heroku`)
           .then(res => {
-              setAuth(true)
+              setAuth(true);
               const persons = res.data;
               setUser(persons);
           })
