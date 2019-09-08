@@ -8,29 +8,38 @@ function App() {
     const [token, setToken] = useState(null);
 
     const signIn = () => {
-        axios.get(`http://127.0.0.1:5000/auth`)
+        axios.get(`https://passport-upwork.herokuapp.com/auth`)
             .then(res => {
                 const url = res.data;
                 window.location.assign(url);
             })
     };
     const refresh = () => {
-        axios.post(`http://127.0.0.1:5000/refresh`, {
-            code: token,
-        })
+        axios.get(`https://passport-upwork.herokuapp.com/refresh?refresh_token=${token.refresh_token}`)
             .then(res => {
-                const token = res.data;
+               setToken(res.data);
             })
     };
     useEffect(() => {
         if (!Auth) {
             try {
-                let code = window.location.href.split("=")[1].split("&")[0];
-                axios.post('http://127.0.0.1:5000/token', {
-                    code: code,
-                })
+                axios.get('https://passport-upwork.herokuapp.com/userData')
                     .then(function (response) {
                         console.log(response);
+                        if (typeof response.data === 'object') {
+                            setToken(response.data);
+                            axios.get('https://api.heroku.com/account', {
+                                headers: {
+                                    "Authorization": `Bearer ${response.data.access_token}`,
+                                    'Accept': 'application/vnd.heroku+json; version=3'
+                                }
+                            }) .then(res => {
+                                // setAuth(true)
+                                console.log(res.data);
+                                setUser(res.data);
+                                setAuth(true)
+                            })
+                        }
                     })
                     .catch(function (error) {
                         console.log("yes", error);
@@ -48,7 +57,10 @@ function App() {
 
                 {Auth ? (
                     <div>
-                        {user}
+                        {user.name }
+                        <br/>
+                        {user.email}
+                        <br/>
                         <button onClick={refresh}>
                             refresh
                         </button>
