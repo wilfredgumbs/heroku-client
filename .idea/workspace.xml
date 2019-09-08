@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="556e80eb-c1cd-4246-aa4f-376821b7fe9b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -19,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="25" column="69" selection-start-line="25" selection-start-column="69" selection-end-line="25" selection-end-column="69" />
+            <state relative-caret-position="331">
+              <caret line="19" column="37" lean-forward="true" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -42,9 +41,11 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>http://127.0.0.1:5000</find>
+      <find>https://blooming-ocean-64976.herokuapp.com</find>
     </findStrings>
     <replaceStrings>
       <replace>https://blooming-ocean-64976.herokuapp.com/</replace>
+      <replace>https://passport-upwork.herokuapp.com</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -76,11 +77,6 @@
             <path>
               <item name="heroku-client" type="b2602c69:ProjectViewProjectNode" />
               <item name="heroku-client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="heroku-client" type="b2602c69:ProjectViewProjectNode" />
-              <item name="heroku-client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -119,16 +115,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1567892907749</updated>
-      <workItem from="1567892911309" duration="14341000" />
+      <workItem from="1567892911309" duration="15820000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14341000" />
+    <option name="totallyTimeSpent" value="15820000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="954" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="npm" side_tool="true" />
       <window_info id="Favorites" side_tool="true" />
@@ -165,8 +160,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="25" column="69" selection-start-line="25" selection-start-column="69" selection-end-line="25" selection-end-column="69" />
+        <state relative-caret-position="331">
+          <caret line="19" column="37" lean-forward="true" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>

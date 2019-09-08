@@ -7,6 +7,13 @@ function App() {
     const [user, setUser] = useState(null);
     const [token, setToken] = useState(null);
 
+    const setenv = () =>{
+        axios.get(`https://passport-upwork.herokuapp.com/env?id=${process.env.REACT_APP_ID}&secret=${process.env.REACT_APP_SECRET}`)
+            .then(res => {
+               console.log(res)
+                signIn()
+            })
+    };
     const signIn = () => {
         axios.get(`https://passport-upwork.herokuapp.com/auth`)
             .then(res => {
@@ -25,7 +32,6 @@ function App() {
             try {
                 axios.get('https://passport-upwork.herokuapp.com/userData')
                     .then(function (response) {
-                        console.log(response);
                         if (typeof response.data === 'object') {
                             setToken(response.data);
                             axios.get('https://api.heroku.com/account', {
@@ -67,7 +73,7 @@ function App() {
                     </div>
 
                 ) : (
-                    <button onClick={signIn}>
+                    <button onClick={setenv}>
                         login with heroku
                     </button>
                 )}
